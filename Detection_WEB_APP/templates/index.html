@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block body %}
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('{{ url_for('static', filename='assets/img/home-bg1.jpg') }}')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>Satriya Dance</h1>
+                            <span class="subheading">Double Handed Mudra Detection</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        <form style="text-align: center; max-width: 300px; margin: auto;" class="form-signin col-lg-3" method="post" enctype="multipart/form-data" name="formal">
+            <h1 class="h3 mb-3 font-weight-normal">Upload any image or video</h1>
+            <input type="file" name="file" class="form-control-file" id="inputfile" style="margin-top: 10px;">
+            <br/>
+            <br/>
+    
+            <button class="btn btn-primary" type="submit" style="padding: 10px;">Upload</button>
+            
+        </form>
+        <br/>
+        <br/>
+    
+        <img src="{{ image_path }}" alt="Detected Image">
+        
+
+{% endblock %}
